@@ -6,6 +6,7 @@ import {
   getAddress,
   updateAddress,
 } from "../../services/address.service";
+import { apiManager } from "../../services/common/api.manager";
 
 export class AddressesEditPage extends React.Component {
   constructor(props) {
@@ -77,6 +78,7 @@ export class AddressesEditPage extends React.Component {
                 createAddress(this.props.match.params.customerId, values).then(
                   (result) => {
                     console.log(result);
+                    console.log(apiManager.errors);
                     if (result.ok == 1) {
                       this.props.history.push("/customers");
                     }
