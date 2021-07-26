@@ -1,6 +1,5 @@
 import React from "react";
-import {BrowserRouter as Router, Link, Route, Switch} from "react-router-dom";
-import {getCustomers} from "../../services/customer.service";
+import {Link} from "react-router-dom";
 import {getAddresses} from "../../services/address.service";
 
 export class AddressesPage extends React.Component {
